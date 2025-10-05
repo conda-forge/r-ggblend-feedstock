@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggblend_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggblend/ggblend_{{ version }}.tar.gz
-  sha256: df144daf350899adf95a28e01ee68669c27dbb353ecc1d42195476bc2d4dfe73
+  sha256: 7fd1b4152eed34310fdc5aaf216b3cf499fc377ff2675402ea42d287e3b1525f
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -40,14 +40,8 @@ about:
   home: https://mjskay.github.io/ggblend
   dev_url: https://github.com/mjskay/ggblend/
   license: MIT
-  summary: Algebra of operations for blending, copying, adjusting, and compositing layers in
-    'ggplot2'. Supports copying and adjusting the aesthetics or parameters of an existing
-    layer, partitioning a layer into multiple pieces for re-composition, applying affine
-    transformations to layers, and combining layers (or partitions of layers) using
-    blend modes (including commutative blend modes, like multiply and darken). Blend
-    mode support is particularly useful for creating plots with overlapping groups where
-    the layer drawing order does not change the output; see Kindlmann and Scheidegger
-    (2014) <doi:10.1109/TVCG.2014.2346325>.
+  summary: Algebra of operations for blending, copying, adjusting, and compositing layers in 'ggplot2'. Supports copying and adjusting the aesthetics or parameters of an existing layer, partitioning a layer into multiple pieces for re-composition, applying affine transformations to layers, and combining layers (or partitions
+    of layers) using blend modes (including commutative blend modes, like multiply and darken). Blend mode support is particularly useful for creating plots with overlapping groups where the layer drawing order does not change the output; see Kindlmann and Scheidegger (2014) <doi:10.1109/TVCG.2014.2346325>.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
